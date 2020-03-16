@@ -22,6 +22,15 @@ const Homepage = ({ data }) => {
 					<Link to={node.slug}>
 						<h2>{node.title}</h2>
 					</Link>
+					<p>{new Date(node.date).toDateString()}</p>
+
+					{node.tags && (
+						<ul>
+							{node.tags.map(({ id, name }) => (
+								<li key={id}>{name}</li>
+							))}
+						</ul>
+					)}
 					<h3 dangerouslySetInnerHTML={{ __html: node.excerpt }} />
 				</div>
 			))}
@@ -47,6 +56,11 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					title
+					date
+					tags {
+						name
+						id
+					}
 					excerpt
 					slug
 				}
