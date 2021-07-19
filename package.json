@@ -7,7 +7,7 @@
   "dependencies": {
     "gatsby": "^2.13.73",
     "gatsby-core-utils": "^1.0.28",
-    "gatsby-source-wordpress": "^3.0.0",
+    "gatsby-source-wordpress": "^4.0.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1"
